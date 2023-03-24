@@ -23,7 +23,7 @@
       };
     };
   in {
-    homeManagerConfigurations = {
+    homeConfigurations = {
       nick = home-manager.lib.homeManagerConfiguration {
         modules = [ ./users/nick/home.nix ];
       };
