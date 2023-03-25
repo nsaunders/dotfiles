@@ -56,6 +56,10 @@
     epiphany
   ];
 
+  environment.systemPackages = with pkgs; [
+    home-manager
+  ];
+
   # Configure keymap in X11
   services.xserver = {
     layout = "us";
