@@ -88,7 +88,6 @@
   "window.titleBarStyle" = "custom";
   "workbench.colorTheme" = "Default Dark+";
   "workbench.colorCustomizations" = {
-    "terminal.background" = "#0c0c0c";
       };
     };
     extensions = with pkgs.vscode-extensions; [
