@@ -6,7 +6,11 @@
   nix = {
     package = pkgs.nixFlakes;
     settings = {
-      trusted-users = ["root", "nick", "@wheel"];
+      trusted-users = [
+        "root"
+        "nick"
+        "@wheel"
+      ];
       experimental-features = [
         "nix-command"
         "flakes"
