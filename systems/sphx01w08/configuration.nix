@@ -3,6 +3,17 @@
     ./hardware-configuration.nix
   };
 
+  nix = {
+    package = pkgs.nixFlakes;
+    settings = {
+      trusted-users = ["root", "nick", "@wheel"];
+      experimental-features = [
+        "nix-command"
+        "flakes"
+      ];
+    };
+  };
+
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.efi.efiSysMountPoint = "/boot/efi";
