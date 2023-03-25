@@ -69,6 +69,20 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
+  # https://github.com/NixOS/nixpkgs/issues/78535
+  # hardware.printers = {
+  #   ensureDefaultPrinter = "sphx01p01";
+  #   ensurePrinters = [
+  #     {
+  #       name = "sphx01p01";
+  #       deviceUri = "ipp://sphx01p01.home/binary_p1";
+  #       model = "Generic PCL Laser Printer";
+  #       location = "Office";
+  #       description = "Brother HL-2070N";
+  #     }
+  #   ];
+  # };
+
   # Enable sound with pipewire.
   sound.enable = true;
   hardware.pulseaudio.enable = false;
