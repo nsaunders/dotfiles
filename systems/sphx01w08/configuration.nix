@@ -1,7 +1,7 @@
 { pkgs, ... }: {
-  imports = {
+  imports = [
     ./hardware-configuration.nix
-  };
+  ];
 
   nix = {
     package = pkgs.nixFlakes;
