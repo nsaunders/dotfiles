@@ -7,11 +7,16 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    alejandra = {
+      url = "github:kamadorueda/alejandra/3.0.0";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
     nixpkgs,
     home-manager,
+    alejandra,
     ...
   }: let
     system = "x86_64-linux";
@@ -22,11 +27,23 @@
         allowUnfree = true;
       };
     };
+
+    overlay = final: prev: {
+      inherit pkgs;
+      alejandra = alejandra.defaultPackage.${system};
+    };
+
+    overlays = [overlay];
+
+    hm-configuration-nick = {...}: {
+      nixpkgs.overlays = overlays;
+      imports = [./users/nick/home.nix];
+    };
   in {
     homeConfigurations = {
       nick = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        modules = [ ./users/nick/home.nix ];
+        modules = [hm-configuration-nick];
       };
     };
 
@@ -35,7 +52,10 @@
         inherit system pkgs;
 
         modules = [
-          { system.stateVersion = "22.11"; }
+          {
+            nixpkgs.overlays = overlays;
+            system.stateVersion = "22.11";
+          }
           ./systems/sphx01w08/configuration.nix
         ];
       };

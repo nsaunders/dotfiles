@@ -27,6 +27,7 @@
 
   home.packages = with pkgs; [
     _1password-gui
+    alejandra
     direnv
     git-crypt
     meslo-lgs-nf
