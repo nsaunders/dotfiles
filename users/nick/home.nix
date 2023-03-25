@@ -29,6 +29,7 @@
     _1password-gui
     alejandra
     direnv
+    discord
     git-crypt
     meslo-lgs-nf
     pinentry.gnome3
