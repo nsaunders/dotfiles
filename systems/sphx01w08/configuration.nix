@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   imports = [
     ./hardware-configuration.nix
   ];
@@ -84,7 +84,7 @@
     description = "Nick Saunders";
     isNormalUser = true;
     initialPassword = "nick";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = ["networkmanager" "wheel"];
   };
 
   users.defaultUserShell = pkgs.zsh;
@@ -99,7 +99,7 @@
     overrideDevices = true;
     overrideFolders = true;
     devices = {
-      "sphx01m01" = { id = "PKRTMPE-RQGGBPB-37NEN2Z-Q462UEV-RZQBJJN-SJ4DNE2-3DHSW73-KWM4YQE"; };
+      "sphx01m01" = {id = "PKRTMPE-RQGGBPB-37NEN2Z-Q462UEV-RZQBJJN-SJ4DNE2-3DHSW73-KWM4YQE";};
     };
     folders = {
       "Documents" = {
