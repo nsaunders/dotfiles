@@ -25,6 +25,7 @@
   in {
     homeConfigurations = {
       nick = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
         modules = [ ./users/nick/home.nix ];
       };
     };
