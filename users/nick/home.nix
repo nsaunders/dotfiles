@@ -8,8 +8,6 @@
     EDITOR = "nvim";
   };
 
-  # nixpkgs.config.allowUnfree = true; # see what happens without
-
   dconf = {
     enable = true;
     settings = {
