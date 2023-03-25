@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   home.stateVersion = "22.11";
 
   home.username = "nick";
@@ -12,11 +12,11 @@
     enable = true;
     settings = {
       "org/gnome/desktop/input-sources" = {
-        xkb-options = [ "caps:swapescape" ];
+        xkb-options = ["caps:swapescape"];
       };
       "org/gnome/desktop/interface" = {
         color-scheme = "prefer-dark";
-    monospace-font-name = "MesloLGS NF";
+        monospace-font-name = "MesloLGS NF";
       };
       "org/gnome/desktop/peripherals/mouse" = {
         natural-scroll = true;
@@ -40,7 +40,7 @@
     enable = true;
     commandLineArgs = ["--incognito" "--force-dark-mode"];
     extensions = [
-      { id = "aeblfdkhhhdcdjpifhhbdiojplfjncoa"; }
+      {id = "aeblfdkhhhdcdjpifhhbdiojplfjncoa";}
     ];
   };
 
@@ -76,6 +76,8 @@
     enableExtensionUpdateCheck = false;
 
     userSettings = {
+      "alejandra.program" = "alejandra";
+      "editor.formatOnSave" = true;
       "editor.fontFamily" = "MesloLGS NF";
       "editor.fontSize" = 14;
       "editor.detectIndentation" = false;
@@ -83,41 +85,45 @@
       "editor.tabSize" = 2;
       "files.insertFinalNewline" = false;
       "keyboard.dispatch" = "keyCode";
-  "terminal.integrated.fontFamily" = "MesloLGS NF";
-  "terminal.integrated.fontSize" = 14;
+      "terminal.integrated.fontFamily" = "MesloLGS NF";
+      "terminal.integrated.fontSize" = 14;
       "vim.startInInsertMode" = false;
-  "window.titleBarStyle" = "custom";
-  "workbench.colorTheme" = "Default Dark+";
-  "workbench.colorCustomizations" = {
+      "window.titleBarStyle" = "custom";
+      "workbench.colorTheme" = "Default Dark+";
+      "[nix]" = {
+        "editor.defaultFormatter" = "kamadorueda.alejandra";
       };
     };
-    extensions = with pkgs.vscode-extensions; [
-      vscodevim.vim
-      dhall.dhall-lang
-      dhall.vscode-dhall-lsp-server
-      bbenoist.nix
-      haskell.haskell
-      justusadam.language-haskell
-    ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-      {
-        name = "inline-html";
-        publisher = "pushqrdx";
-        version = "0.3.7";
-        sha256 = "sha256-fpF6q5KJLV5vCFysA9qun0mZAAslFTtUVEZXuD5mqnQ=";
-      }
-      {
-        name = "language-purescript";
-        publisher = "nwolverson";
-        version = "0.2.8";
-        sha256 = "sha256-2uOwCHvnlQQM8s8n7dtvIaMgpW8ROeoUraM02rncH9o=";
-      }
-      {
-        name = "ide-purescript";
-        publisher = "nwolverson";
-        version = "0.26.1";
-        sha256 = "sha256-ccTuoDSZKf1WsTRX2TxXeHy4eRuOXsAc7rvNZ2b56MU=";
-      }
-    ];
+    extensions = with pkgs.vscode-extensions;
+      [
+        kamadorueda.alejandra
+        vscodevim.vim
+        dhall.dhall-lang
+        dhall.vscode-dhall-lsp-server
+        bbenoist.nix
+        haskell.haskell
+        justusadam.language-haskell
+      ]
+      ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+        {
+          name = "inline-html";
+          publisher = "pushqrdx";
+          version = "0.3.7";
+          sha256 = "sha256-fpF6q5KJLV5vCFysA9qun0mZAAslFTtUVEZXuD5mqnQ=";
+        }
+        {
+          name = "language-purescript";
+          publisher = "nwolverson";
+          version = "0.2.8";
+          sha256 = "sha256-2uOwCHvnlQQM8s8n7dtvIaMgpW8ROeoUraM02rncH9o=";
+        }
+        {
+          name = "ide-purescript";
+          publisher = "nwolverson";
+          version = "0.26.1";
+          sha256 = "sha256-ccTuoDSZKf1WsTRX2TxXeHy4eRuOXsAc7rvNZ2b56MU=";
+        }
+      ];
     keybindings = [
       {
         key = "alt+j";
