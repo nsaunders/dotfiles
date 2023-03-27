@@ -31,6 +31,9 @@
     direnv
     discord
     git-crypt
+    hunspell
+    hunspellDicts.en_US
+    libreoffice
     meslo-lgs-nf
     pinentry.gnome3
   ];
