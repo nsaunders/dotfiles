@@ -36,6 +36,7 @@
     libreoffice
     meslo-lgs-nf
     pinentry.gnome3
+    pdftk
   ];
 
   home.file.".p10k.zsh".source = ./.p10k.zsh;
