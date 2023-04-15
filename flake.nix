@@ -7,6 +7,7 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     alejandra = {
       url = "github:kamadorueda/alejandra/3.0.0";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -16,6 +17,7 @@
   outputs = {
     nixpkgs,
     home-manager,
+    nixos-hardware,
     alejandra,
     ...
   }: let
@@ -56,6 +58,7 @@
             nixpkgs.overlays = overlays;
             system.stateVersion = "22.11";
           }
+          nixos-hardware.nixosModules.lenovo-thinkpad-t480
           ./systems/sphx01w08/configuration.nix
         ];
       };
