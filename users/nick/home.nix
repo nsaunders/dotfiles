@@ -42,6 +42,8 @@
 
   home.file.".p10k.zsh".source = ./.p10k.zsh;
 
+  home.file.".config/ngrok/ngrok.yml".source = ./ngrok.secret.yml;
+
   programs.chromium = {
     enable = true;
     commandLineArgs = ["--incognito" "--force-dark-mode"];
