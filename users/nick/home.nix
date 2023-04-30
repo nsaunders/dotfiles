@@ -35,6 +35,7 @@
     hunspellDicts.en_US
     libreoffice
     meslo-lgs-nf
+    ngrok
     pinentry.gnome3
     pdftk
   ];
