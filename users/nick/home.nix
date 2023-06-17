@@ -98,8 +98,26 @@
       "vim.startInInsertMode" = false;
       "window.titleBarStyle" = "custom";
       "workbench.colorTheme" = "Default Dark+";
+      "[css]" = {
+        "editor.defaultFormatter" = "esbenp.prettier-vscode";
+      };
+      "[html]" = {
+        "editor.defaultFormatter" = "esbenp.prettier-vscode";
+      };
+      "[javascript]" = {
+        "editor.defaultFormatter" = "esbenp.prettier-vscode";
+      };
+      "[json]" = {
+        "editor.defaultFormatter" = "esbenp.prettier-vscode";
+      };
       "[nix]" = {
         "editor.defaultFormatter" = "kamadorueda.alejandra";
+      };
+      "[typescriptreact]" = {
+        "editor.defaultFormatter" = "esbenp.prettier-vscode";
+      };
+      "[typescript]" = {
+        "editor.defaultFormatter" = "esbenp.prettier-vscode";
       };
     };
     extensions = with pkgs.vscode-extensions;
@@ -111,6 +129,7 @@
         bbenoist.nix
         haskell.haskell
         justusadam.language-haskell
+        esbenp.prettier-vscode
       ]
       ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         {
