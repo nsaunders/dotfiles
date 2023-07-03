@@ -30,6 +30,7 @@
     alejandra
     direnv
     discord
+    gcolor3
     git-crypt
     hunspell
     hunspellDicts.en_US
