@@ -37,6 +37,7 @@
     libreoffice
     meslo-lgs-nf
     ngrok
+    nodejs
     pinentry.gnome3
     pdftk
   ];
