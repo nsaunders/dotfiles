@@ -112,13 +112,15 @@
     configDir = "/home/nick/.config/syncthing";
     overrideDevices = true;
     overrideFolders = true;
-    devices = {
-      "sphx01m01" = {id = "PKRTMPE-RQGGBPB-37NEN2Z-Q462UEV-RZQBJJN-SJ4DNE2-3DHSW73-KWM4YQE";};
-    };
-    folders = {
-      "Documents" = {
-        path = "/home/nick/Documents";
-        devices = ["sphx01m01"];
+    settings = {
+      devices = {
+        "sphx01m01" = {id = "PKRTMPE-RQGGBPB-37NEN2Z-Q462UEV-RZQBJJN-SJ4DNE2-3DHSW73-KWM4YQE";};
+      };
+      folders = {
+        "Documents" = {
+          path = "/home/nick/Documents";
+          devices = ["sphx01m01"];
+        };
       };
     };
   };
