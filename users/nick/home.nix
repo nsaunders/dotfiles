@@ -165,6 +165,11 @@
         command = "selectPrevSuggestion";
         when = "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus";
       }
+      {
+        key = "ctrl+`";
+        command = "workbench.action.focusActiveEditorGroup";
+        when = "terminalFocus";
+      }
     ];
   };
 
