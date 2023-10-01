@@ -28,6 +28,7 @@
   home.packages = with pkgs; [
     _1password-gui
     alejandra
+    bun
     direnv
     discord
     gcolor3
