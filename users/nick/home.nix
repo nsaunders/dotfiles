@@ -52,6 +52,7 @@
     commandLineArgs = ["--incognito" "--force-dark-mode"];
     extensions = [
       {id = "aeblfdkhhhdcdjpifhhbdiojplfjncoa";}
+      {id = "fmkadmapgofadopljbjfkapdkoienihi";}
     ];
   };
 
