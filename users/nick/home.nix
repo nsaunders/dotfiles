@@ -141,6 +141,7 @@
         justusadam.language-haskell
         esbenp.prettier-vscode
         dbaeumer.vscode-eslint
+        github.vscode-github-actions
       ]
       ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         {
