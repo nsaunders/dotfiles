@@ -41,6 +41,7 @@
     nodejs
     pinentry.gnome3
     pdftk
+    nodePackages.wrangler
   ];
 
   home.file.".p10k.zsh".source = ./.p10k.zsh;
