@@ -38,7 +38,7 @@
     libreoffice
     meslo-lgs-nf
     ngrok
-    nodejs
+    nodejs_20
     pinentry.gnome3
     pdftk
     nodePackages.wrangler
