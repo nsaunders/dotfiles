@@ -143,6 +143,7 @@
         esbenp.prettier-vscode
         dbaeumer.vscode-eslint
         github.vscode-github-actions
+        stkb.rewrap
       ]
       ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         {
