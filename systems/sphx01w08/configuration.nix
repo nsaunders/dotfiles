@@ -107,6 +107,8 @@
 
   programs.zsh.enable = true;
 
+  programs.nix-ld.enable = true;
+
   services.syncthing = {
     enable = true;
     user = "nick";
