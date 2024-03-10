@@ -147,10 +147,10 @@
       ]
       ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         {
-          name = "inline-html";
-          publisher = "pushqrdx";
-          version = "0.3.7";
-          sha256 = "sha256-fpF6q5KJLV5vCFysA9qun0mZAAslFTtUVEZXuD5mqnQ=";
+          name = "biome";
+          publisher = "biomejs";
+          version = "2024.3.70509";
+          sha256 = "sha256-st0evsDDv388W7SfDlLuBJC4pBi1xbImAiyhs8DiJ+w=";
         }
         {
           name = "language-purescript";
